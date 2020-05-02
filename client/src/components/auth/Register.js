@@ -39,6 +39,7 @@ const Register = (props) => {
       setAlert("Password do not match", "dander");
     } else {
       register({
+        user,
         name,
         email,
         password,
@@ -96,8 +97,9 @@ const Register = (props) => {
         </div>
         <input
           type='Submit'
-          value='Register'
+          defaultValue='Register'
           className='btn btn-primary btn-block'
+          onChange={onSubmit}
         />
       </form>
     </div>

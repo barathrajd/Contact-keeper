@@ -18,6 +18,7 @@ const AuthState = (props) => {
     token: localStorage.getItem("token"),
     isAuthenticated: null,
     loading: true,
+    user: null,
     error: null,
   };
 
@@ -32,6 +33,10 @@ const AuthState = (props) => {
 
     try {
       const res = await axios.get("/api/auth");
+      dispatch({
+        type: USER_LOADED,
+        payload: res.data,
+      });
     } catch (err) {
       dispatch({
         type: AUTH_ERROR,

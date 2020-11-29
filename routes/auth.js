@@ -7,7 +7,7 @@ const auth = require("../middlerware/auth");
 const { check, validationResult } = require("express-validator");
 const User = require("../models/User");
 
-// @route GET api/auth
+// route GET api/auth
 // @desc  Get loggen in user
 // @access Private
 

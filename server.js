@@ -5,6 +5,7 @@ const app = express();
 connectDB();
 
 // Init middleware
+// Demo
 app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.json({ msg: "Welcome to my api" }));
